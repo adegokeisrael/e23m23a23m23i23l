@@ -6,7 +6,7 @@ The output dataset is an extention of the existing input dataset retrieved from 
 This repo stores the input dataset, the dataset with the embeddings and the code used to generate this dataset.
 ## Architecture
 ![Capture](https://user-images.githubusercontent.com/47308654/206814161-0e9e918f-ee51-4cf1-9b80-87bfe33e92da.PNG)
-## This project implements a fully funtional flask interfaced app written majorly in python for spam filtering. It employs a multi modal blocks consisting of a BERT Model,Light GBM classifier and a Naive Bayes classifier.
+## This project implements a fully funtional flask interfaced app written majorly in python for spam filtering. It employs a multi modal blocks consisting of a BERT Model,Light GBM classifier and a Naive Bayes classifier. The project reads email messages via the google gmail API and run it through our classifier to evalute its content. The result of evaluation is the prensented on the front-end.
 ## modals employed
 * Bidirectional Encoder Representations from Transformers (BERT) is a transformer-based machine learning technique for natural language processing (NLP) pre-training developed by Google. With Google leveraging BERT in its search engine,and across it text based product and by late 2020 it was using BERT in almost every English-language query. The model have been trained on extremely large corpus of text all over the web, hence having a good sense of text intent and 'understanding'.
 * Light GBM(Gradient Boosting machine) Classifier
@@ -68,15 +68,7 @@ The output encoded dataset contains the same information as the input dataset pl
 
 ## Procedure
 
-HuggingFace's DistilBERT is used from their [transformers](https://github.com/huggingface/transformers) package.
 
-[Jay Allamar's tutorial](http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/) is followed to encode the messages using DistilBERT.
-
-For memory efficiency reasons all messages are first stripped from punctuation and then english stopwords are removed. Then only the first 30 tokens are kept.
-
-As per [my analysis](https://www.kaggle.com/mrlucasfischer/bert-the-spam-detector-that-uses-just-10-words) of this dataset on kaggle it can be seen that most *ham* messages have around 10 words and *spam* messages around 29 words, without stopwords. This means that once stopwords are removed from the messages, keeping the first 30 tokens might mean some information loss but not to critical. (Acrually in [my analysis](https://www.kaggle.com/mrlucasfischer/bert-the-spam-detector-that-uses-just-10-words) it is demonstrated that encoding the messages using only the first 10 tokens after processing them is enough to have a good encoding capable of achieving 88.1 ROC-AUC with a baseline random forest.)
-
-## Acknowledgements
 
 Almeida, T.A., Gómez Hidalgo, J.M., Yamakami, A. Contributions to the Study of SMS Spam Filtering: New Collection and Results.  Proceedings of the 2011 ACM Symposium on Document Engineering (DOCENG'11), Mountain View, CA, USA, 2011
 
