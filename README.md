@@ -1,5 +1,5 @@
 
-# A multi-modal based BERT-embedded system for spam filtering
+# A Multi-Modal based BERT-embedded system for spam filtering
 
 The output dataset is an extention of the existing input dataset retrieved from the [SMS Spam Collection Dataset](https://www.kaggle.com/uciml/sms-spam-collection-dataset).
 
