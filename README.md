@@ -6,7 +6,7 @@ The output dataset is an extention of the existing input dataset retrieved from 
 This repo stores the input dataset, the dataset with the embeddings and the code used to generate this dataset.
 ## Architecture
 ![Capture](https://user-images.githubusercontent.com/47308654/206814161-0e9e918f-ee51-4cf1-9b80-87bfe33e92da.PNG)
-## This project implements a fully funtional flask interfaced app written majorly in python for spam filtering.it employs a multi modal blocks consisting of a BERT Model,Light GBM classifier and a Naive Bayes classifier.
+## This project implements a fully funtional flask interfaced app written majorly in python for spam filtering. It employs a multi modal blocks consisting of a BERT Model,Light GBM classifier and a Naive Bayes classifier.
 ## modals employed
 * Bidirectional Encoder Representations from Transformers (BERT) is a transformer-based machine learning technique for natural language processing (NLP) pre-training developed by Google. With Google leveraging BERT in its search engine,and across it text based product and by late 2020 it was using BERT in almost every English-language query. Tje model have been trained on extremely large corpus of text all over the web, hence having a good sense of text intent and 'understanding'.
 * Light GBM(Gradient Boosting machine) Classifier
