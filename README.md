@@ -6,7 +6,7 @@
 * This repo stores the input dataset, the dataset with the embeddings and the code used to generate this dataset.
 
 ## Architecture
-![Capture](https://user-images.githubusercontent.com/47308654/206814161-0e9e918f-ee51-4cf1-9b80-87bfe33e92da.PNG)
+![Capture](https://user-images.githubusercontent.com/47308654/212576464-c7580a0e-e33d-432c-badb-650f45ebcc64.PNG)
 
 ## Overview
 * This project implements a fully functional flask interfaced app written in python for spam filtering
