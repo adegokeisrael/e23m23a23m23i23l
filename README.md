@@ -1,16 +1,23 @@
 
-# A Multi-Model based BERT-embedded system for spam detection
+# A Machine Learning Based spam detector
 
 * The output dataset is an extension of the existing input dataset retrieved from the [SMS Spam Collection Dataset](https://www.kaggle.com/uciml/sms-spam-collection-dataset).
 
 * This repo stores the input dataset, the dataset with the embeddings and the code used to generate this dataset.
+
+## Features
+* Spam content Detection
+* Naive Bayes Classifier
+* Malware content Detection
+* BERT classifier
 
 ## Architecture
 ![Capture](https://user-images.githubusercontent.com/47308654/212576464-c7580a0e-e33d-432c-badb-650f45ebcc64.PNG)
 
 ## Overview
 * This project implements a fully functional flask interfaced app written in python for spam filtering
-* It employs multi-model blocks consisting of a BERT Model, Light GBM classifier and a Naive Bayes classifier 
+* It employs multi-model blocks consisting of a BERT Model, Light GBM classifier and a Naive Bayes classifier for a content-based analysis and filtering
+* It integrates a malware detector to scan through attachements for malwares 
 * It reads email messages via the Google gmail API then runs it through our classifier to evaluate its content
 * The result of evaluation is then presented on the front-end in three columns each containing the `Date`, `Sender`, `Subject` and `Prediction`
 
@@ -31,6 +38,7 @@
 * Implemented DistilBERT - a hugging face transformer model
 * Fine Tuned DistilBERT
 * Developed Front End using flask
+* Building the malware detector
 * Deployed flask app to Heroku
 * Project is available for live testing via this [link](https://halogen-esd.herokuapp.com)
 
@@ -38,6 +46,7 @@
 * Bidirectional Encoder Representations from Transformers (BERT)
 * Light GBM (Gradient Boosting machine) Classifier
 * Multinomial Naive Bayes
+
 
 ## Input Dataset Structure
 ##### The original dataset contains 5574 english messages each labelled as *spam* or *ham*. This dataset contains 4 columns:
@@ -89,7 +98,8 @@
 ## Future implementations
 * Support for multiple email servers such as yahoo and outlook
 * Analysis of email html content type
-* Analysis of email attachments content
+* NSFW image detection integration
+* Phishing Content Detection
 * Integration with companies and businesses email servers for spam filtering
 
 ## Developers
